@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments - Esports Hub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Esports Hub</div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="login-btn"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="tournaments-section">
+            <h2>Upcoming Tournaments</h2>
+            <div class="tournament-filters">
+                <button class="filter-btn active" data-game="all">All Games</button>
+                <button class="filter-btn" data-game="bgmi">BGMI</button>
+                <button class="filter-btn" data-game="cod">Call of Duty</button>
+                <button class="filter-btn" data-game="valorant">Valorant</button>
+                <button class="filter-btn" data-game="coc">Clash of Clans</button>
+            </div>
+
+            <div class="tournaments-grid">
+                <!-- BGMI Tournament -->
+                <div class="tournament-card" data-game="bgmi">
+                    <div class="tournament-header">
+                        <img src="../images/bgmi.jpeg" alt="BGMI" class="game-logo">
+                        <div class="tournament-title">
+                            <h3>BGMI Championship 2024</h3>
+                            <p class="tournament-time">Starts: May 15, 2024</p>
+                            <p class="registration-timer">Registration Open</p>
+                        </div>
+                    </div>
+                    <div class="tournament-info">
+                        <div class="info-grid three-columns">
+                            <div class="info-item">
+                                <span class="label">Prize Pool</span>
+                                <span class="value">₹50,000</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Teams</span>
+                                <span class="value">16/32</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Format</span>
+                                <span class="value">Squad</span>
+                            </div>
+                        </div>
+                        <div class="tournament-details">
+                            <div class="details-row">
+                                <div class="detail-item">
+                                    <span class="label">Entry Fee</span>
+                                    <span class="value">₹500</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Map</span>
+                                    <span class="value">Erangel</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Duration</span>
+                                    <span class="value">3 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="register-btn">Register Now</button>
+                            <button class="leaderboard-btn">View Leaderboard</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call of Duty Tournament -->
+                <div class="tournament-card" data-game="cod">
+                    <div class="tournament-header">
+                        <img src="../images/cod.webp" alt="Call of Duty" class="game-logo">
+                        <div class="tournament-title">
+                            <h3>COD Mobile Masters</h3>
+                            <p class="tournament-time">Starts: May 20, 2024</p>
+                            <p class="registration-timer">Registration Open</p>
+                        </div>
+                    </div>
+                    <div class="tournament-info">
+                        <div class="info-grid three-columns">
+                            <div class="info-item">
+                                <span class="label">Prize Pool</span>
+                                <span class="value">₹75,000</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Teams</span>
+                                <span class="value">24/32</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Format</span>
+                                <span class="value">Team Deathmatch</span>
+                            </div>
+                        </div>
+                        <div class="tournament-details">
+                            <div class="details-row">
+                                <div class="detail-item">
+                                    <span class="label">Entry Fee</span>
+                                    <span class="value">₹750</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Maps</span>
+                                    <span class="value">Crash, Standoff</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Duration</span>
+                                    <span class="value">2 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="register-btn">Register Now</button>
+                            <button class="leaderboard-btn">View Leaderboard</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valorant Tournament -->
+                <div class="tournament-card" data-game="valorant">
+                    <div class="tournament-header">
+                        <img src="../images/valorant.jpg" alt="Valorant" class="game-logo">
+                        <div class="tournament-title">
+                            <h3>Valorant Pro Series</h3>
+                            <p class="tournament-time">Starts: May 25, 2024</p>
+                            <p class="registration-timer">Registration Open</p>
+                        </div>
+                    </div>
+                    <div class="tournament-info">
+                        <div class="info-grid three-columns">
+                            <div class="info-item">
+                                <span class="label">Prize Pool</span>
+                                <span class="value">₹1,00,000</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Teams</span>
+                                <span class="value">20/32</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Format</span>
+                                <span class="value">5v5</span>
+                            </div>
+                        </div>
+                        <div class="tournament-details">
+                            <div class="details-row">
+                                <div class="detail-item">
+                                    <span class="label">Entry Fee</span>
+                                    <span class="value">₹1,000</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Maps</span>
+                                    <span class="value">Ascent, Bind</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Duration</span>
+                                    <span class="value">3 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="register-btn">Register Now</button>
+                            <button class="leaderboard-btn">View Leaderboard</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clash of Clans Tournament -->
+                <div class="tournament-card" data-game="coc">
+                    <div class="tournament-header">
+                        <img src="../images/coc.jpeg" alt="Clash of Clans" class="game-logo">
+                        <div class="tournament-title">
+                            <h3>COC Clan Wars</h3>
+                            <p class="tournament-time">Starts: May 30, 2024</p>
+                            <p class="registration-timer">Registration Open</p>
+                        </div>
+                    </div>
+                    <div class="tournament-info">
+                        <div class="info-grid three-columns">
+                            <div class="info-item">
+                                <span class="label">Prize Pool</span>
+                                <span class="value">₹25,000</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Clans</span>
+                                <span class="value">8/16</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Format</span>
+                                <span class="value">Clan War</span>
+                            </div>
+                        </div>
+                        <div class="tournament-details">
+                            <div class="details-row">
+                                <div class="detail-item">
+                                    <span class="label">Entry Fee</span>
+                                    <span class="value">₹300</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">TH Level</span>
+                                    <span class="value">TH12+</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Duration</span>
+                                    <span class="value">2 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <button class="register-btn">Register Now</button>
+                            <button class="leaderboard-btn">View Leaderboard</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-tournament-title">Register for Tournament</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" name="teamName" required>
+                </div>
+                <div class="form-group">
+                    <label for="captainName">Captain Name</label>
+                    <input type="text" id="captainName" name="captainName" required>
+                </div>
+                <div class="form-group">
+                    <label for="captainEmail">Captain Email</label>
+                    <input type="email" id="captainEmail" name="captainEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="captainPhone">Captain Phone</label>
+                    <input type="tel" id="captainPhone" name="captainPhone" required>
+                </div>
+                
+                <div id="team-members-section">
+                    <h3>Team Members</h3>
+                    <div id="team-members-container">
+                        <!-- Team member fields will be added dynamically -->
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Register Team</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboard-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="leaderboard-title">Tournament Leaderboard</h2>
+            <div class="leaderboard-filters">
+                <button class="leaderboard-filter-btn active" data-filter="all">All Teams</button>
+                <button class="leaderboard-filter-btn" data-filter="pending">Pending</button>
+                <button class="leaderboard-filter-btn" data-filter="approved">Approved</button>
+                <button class="leaderboard-filter-btn" data-filter="rejected">Rejected</button>
+            </div>
+            <div class="leaderboard-table-container">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Captain</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Leaderboard entries will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your premier destination for esports tournaments and competitive gaming events.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Esports Tournament Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html> 

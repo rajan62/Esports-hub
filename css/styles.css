@@ -1,0 +1,1007 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #00ff88;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto; 
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+.nav-links .login-btn {
+    background-color: #00ff88;
+    color: #1a1a1a;
+    padding: 0 4%;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links .login-btn:hover {
+    background-color: #00cc6a;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../images/background-image.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #00ff88;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+.games-section {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.games-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.game-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+.tournaments-section {
+    padding: 8rem 2rem 5rem 2rem;
+}
+
+.tournaments-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.tournament-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #00ff88;
+    color: #1a1a1a;
+}
+
+.tournaments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #00c853, #00b0ff);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #00ff88;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .games-grid,
+    .tournaments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tournament Cards */
+.tournament-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.tournament-card:hover {
+    transform: translateY(-5px);
+}
+
+.tournament-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+    color: white;
+}
+
+.game-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.tournament-title {
+    flex: 1;
+}
+
+.tournament-title h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.tournament-time {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 0.3rem;
+}
+
+.registration-timer {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #00ff88;
+    margin-top: 0.3rem;
+}
+
+.registration-timer.closed {
+    color: #ff3333;
+}
+
+.tournament-info {
+    padding: 1.5rem;
+}
+
+.info-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.info-grid.three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.info-grid.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item .label {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.info-item .value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.tournament-details {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.details-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.detail-item .label {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.detail-item .value {
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.spots-progress {
+    margin-bottom: 1.5rem;
+}
+
+.spots-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #eee;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #00ff88;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.tournament-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.register-btn,
+.leaderboard-btn {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.register-btn {
+    background-color: #00ff88;
+    color: #1a1a1a;
+}
+
+.register-btn:hover {
+    background-color: #00cc6a;
+}
+
+.register-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.register-btn:disabled:hover {
+    background-color: #cccccc;
+}
+
+.leaderboard-btn {
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+.leaderboard-btn:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .tournament-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-logo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .info-grid,
+    .details-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .tournament-actions {
+        flex-direction: column;
+    }
+}
+
+.menu-toggle{
+    display: none;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        padding: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #00ff88;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form Validation Styles */
+#contact-form input:invalid,
+#contact-form select:invalid,
+#contact-form textarea:invalid {
+    border-color: #ff3333;
+}
+
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #00ff88;
+    box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+/* Success Message Animation */
+.success-message {
+    background-color: #e6ffe6;
+    color: #00cc6a;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Registration Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.modal::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+#modal-tournament-title {
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.form-group textarea::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Responsive styles for modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
+    }
+}
+
+/* Team Member Fields Styles */
+#team-members-section {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+#team-members-section h3 {
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.team-member-field {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.team-member-field h4 {
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+    margin-top: 1.5rem;
+}
+
+.leaderboard-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.leaderboard-filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-filter-btn.active,
+.leaderboard-filter-btn:hover {
+    background-color: #00ff88;
+    color: #1a1a1a;
+}
+
+.leaderboard-table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+
+.leaderboard-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.leaderboard-table .rank {
+    font-weight: bold;
+    width: 60px;
+}
+
+.leaderboard-table .status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.leaderboard-table .status.registered {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.leaderboard-table .status.approved {
+    background-color: #00c853;
+}
+
+.leaderboard-table .status.rejected {
+    background-color: #ff1744;
+}
+
+.leaderboard-table .status.pending {
+    background-color: #ffab00;
+}
+
+/* Responsive styles for leaderboard */
+@media (max-width: 768px) {
+    .leaderboard-table th:nth-child(3),
+    .leaderboard-table td:nth-child(3),
+    .leaderboard-table th:nth-child(4),
+    .leaderboard-table td:nth-child(4) {
+        display: none;
+    }
+}
+
+/* Authentication Pages Styling */
+.auth-section {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../images/background-image.jpg') center/cover no-repeat fixed;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form {
+    text-align: center;
+}
+
+.auth-form h2 {
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #00ff88;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #00ff88;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #00cc6a;
+    transform: translateY(-2px);
+}
+
+.auth-links {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.auth-links p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.auth-links a {
+    color: #00cc6a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: #00ff88;
+}
+
+/* Active Navigation Link */
+.nav-links .active {
+    color: #00ff88;
+}
+
+.nav-links .login-btn.active {
+    background-color: #00cc6a;
+    color: #1a1a1a;
+} 
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.team-member-fieldset {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.team-member-fieldset legend {
+    color: #00bcd4;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
